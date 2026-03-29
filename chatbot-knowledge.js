@@ -117,10 +117,10 @@ log home pressure wash|Log homes need specialized low-impact methods and stain-a
 lead paint exterior|Chipping lead paint requires EPA lead-safe practices—we may decline jobs that cannot be done safely.
 asbestos siding|If you suspect asbestos, do not disturb—consult an abatement pro before any exterior washing.
 noise complaints neighbors|We schedule within normal working hours for residential unless you arrange otherwise with neighbors.
-water reclamation required|Some commercial sites require reclaiming wash water—we follow local municipal rules when applicable.
+hours,open now,when are you open,office hours,business hours,what time|We answer the phone during business hours: Monday–Friday 7 a.m.–6 p.m. and Saturday 8 a.m.–4 p.m. Sunday closed. Messages and the contact form are returned the next business day.
 before open house|Book washing before listing photos or open houses—popular times fill fast in spring.
 realtor curb appeal|Clean siding and concrete photograph better and support asking price—fast ROI for sellers.
-tenant access rental|We coordinate with tenants or property managers for access—lockbox and gate codes help.
+google review,leave a review,write a review on google|Use the Leave a Google review button after you add your Place ID in reviews-config.js. Until then, open Google Maps, find our listing, scroll to reviews, and tap Write a review.
 commercial warehouse walls|Large wall and bay door packages are quoted by square footage and soil type—dust and tire marks are common.
 restaurant grease pad|Grease pads need hot water or degreasers and often more frequent service—after-hours available.
 stamped concrete wash|Stamped texture traps dirt—surface cleaners revive contrast without destroying color hardener.

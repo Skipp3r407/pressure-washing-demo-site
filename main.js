@@ -15,6 +15,45 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
+  /* ----- Google Business: map embed + review links from reviews-config.js ----- */
+  (function applyApexwashGoogle() {
+    var cfg = window.APEXWASH_GOOGLE;
+    if (!cfg) return;
+    var listing =
+      cfg.listingUrl ||
+      "https://www.google.com/maps/search/?api=1&query=ApexWash+Exterior+Services";
+    var readUrl = cfg.reviewsUrl || listing;
+    if (cfg.placeId) {
+      readUrl =
+        cfg.reviewsUrl ||
+        "https://search.google.com/local/reviews?placeid=" + encodeURIComponent(cfg.placeId);
+    }
+    var writeUrl = listing;
+    var writeTitle =
+      "Opens your Google Maps listing—tap Write a review. Add your Place ID in reviews-config.js for a direct review link.";
+    if (cfg.placeId) {
+      writeUrl =
+        "https://search.google.com/local/writereview?placeid=" +
+        encodeURIComponent(cfg.placeId);
+      writeTitle = "";
+    }
+    document.querySelectorAll('[data-apex-google="read"]').forEach(function (a) {
+      a.href = readUrl;
+    });
+    document.querySelectorAll('[data-apex-google="write"]').forEach(function (a) {
+      a.href = writeUrl;
+      if (writeTitle) {
+        a.setAttribute("title", writeTitle);
+      } else {
+        a.removeAttribute("title");
+      }
+    });
+    var mapIframe = document.querySelector(".reviews-embed__iframe");
+    if (mapIframe && cfg.mapsEmbedSrc) {
+      mapIframe.src = cfg.mapsEmbedSrc;
+    }
+  })();
+
   /* ----- Loading splash 3–5s ----- */
   var splash = document.getElementById("page-splash");
   var splashFill = document.querySelector(".page-splash__bar-fill");
@@ -368,7 +407,7 @@
     chatLauncher.setAttribute("aria-expanded", "true");
     if (chatMessages && !chatMessages.dataset.seeded) {
       appendChatBubble(
-        "Hi! I am the ApexWash assistant. Ask about services, soft wash, pricing ballparks, or scheduling—or use the chips below.",
+        "Hi! I am the ApexWash assistant. Ask about services, soft wash, pricing, or scheduling. Office hours: Mon–Fri 7–6, Sat 8–4 (Sun closed)—or use the chips below.",
         "bot"
       );
       chatMessages.dataset.seeded = "1";

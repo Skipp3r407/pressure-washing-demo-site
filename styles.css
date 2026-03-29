@@ -89,9 +89,31 @@ a:hover {
 .top-bar__inner {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 1.25rem;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+  flex-wrap: wrap;
   min-height: var(--topbar-h);
+}
+
+.top-bar__hours {
+  margin: 0;
+  font-size: 0.6875rem;
+  color: rgba(232, 236, 241, 0.88);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+@media (min-width: 480px) {
+  .top-bar__hours {
+    font-size: 0.75rem;
+  }
+}
+
+.top-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-shrink: 0;
 }
 
 .top-bar__cta {
@@ -873,6 +895,77 @@ a:hover {
   font-weight: 600;
 }
 
+.contact-hours {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e8ecf0;
+}
+
+.contact-hours__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.hours-list {
+  margin: 0;
+  padding: 0;
+}
+
+.hours-list__row {
+  display: grid;
+  grid-template-columns: minmax(7.5rem, auto) 1fr;
+  gap: 0.35rem 1rem;
+  margin-bottom: 0.45rem;
+  align-items: baseline;
+}
+
+.hours-list__row:last-child {
+  margin-bottom: 0;
+}
+
+.hours-list dt {
+  margin: 0;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-navy);
+}
+
+.hours-list dd {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--color-muted);
+}
+
+.hours-list__row--note dt,
+.hours-list__row--note dd {
+  font-size: 0.8125rem;
+}
+
+.hours-list--footer .hours-list__row {
+  grid-template-columns: minmax(5rem, auto) 1fr;
+  margin-bottom: 0.4rem;
+}
+
+.hours-list--footer dt {
+  color: #e8ecf1;
+  font-size: 0.8125rem;
+}
+
+.hours-list--footer dd {
+  color: #c5cdd8;
+  font-size: 0.8125rem;
+}
+
+.footer-hours-note {
+  margin: 0.85rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: rgba(197, 205, 216, 0.85);
+}
+
 .fine-print {
   font-size: 0.8125rem;
   color: var(--color-muted);
@@ -925,10 +1018,16 @@ a:hover {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .footer-heading {
@@ -1358,6 +1457,35 @@ body.modal-open {
   background: var(--color-bg);
 }
 
+.section--reviews .section-intro code {
+  font-size: 0.85em;
+  padding: 0.1rem 0.35rem;
+  background: var(--color-bg);
+  border-radius: 4px;
+}
+
+.reviews-google-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin: 0 auto 2.25rem;
+  max-width: 52rem;
+  text-align: center;
+}
+
+.reviews-google-actions__btn {
+  min-width: 10rem;
+}
+
+.reviews-google-actions__text-link {
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+
 .reviews-layout {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -1552,6 +1680,53 @@ body.modal-open {
   background: var(--color-bg);
   padding: 0.1rem 0.35rem;
   border-radius: 4px;
+}
+
+.reviews-widget__cta-row {
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+.reviews-setup {
+  margin-top: 1.25rem;
+  padding: 1rem 1.15rem;
+  background: var(--color-bg);
+  border-radius: 8px;
+  border: 1px solid #e8ecf0;
+}
+
+.reviews-setup__title {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-navy);
+}
+
+.reviews-setup__steps {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--color-muted);
+}
+
+.reviews-setup__steps li {
+  margin-bottom: 0.35rem;
+}
+
+.reviews-setup__steps code {
+  font-size: 0.75rem;
+  background: var(--color-surface);
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+}
+
+.reviews-setup__note {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--color-muted);
 }
 
 @media (max-width: 900px) {
