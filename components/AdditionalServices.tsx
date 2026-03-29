@@ -35,15 +35,20 @@ export default function AdditionalServices() {
   return (
     <section className="section">
       <div className="container">
-        <header className="section-header" data-reveal="fade">
+        <header className="section-header" data-reveal="left">
           <h2 className="section-title">Additional services</h2>
           <p className="section-intro">
             Beyond the basics, we offer targeted treatments for roofs, gutters, storefronts, and more.
           </p>
         </header>
         <div className="mini-grid">
-          {items.map((item) => (
-            <article key={item.title} className="mini-card" {...(item.id ? { id: item.id } : {})} data-reveal="up">
+          {items.map((item, index) => (
+            <article
+              key={item.title}
+              className="mini-card"
+              {...(item.id ? { id: item.id } : {})}
+              data-reveal={index % 2 === 0 ? "left" : "right"}
+            >
               <a href="#estimate" className="mini-card__link">
                 <div className="mini-card__img" style={{ backgroundImage: `url('${item.img}')` }} />
                 <h3>{item.title}</h3>

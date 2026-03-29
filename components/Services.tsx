@@ -3,7 +3,7 @@ export default function Services() {
     <section className="section section--cards" id="services">
       <div className="container">
         <div className="card-row">
-          <article className="service-card" id="services-house" data-reveal="up">
+          <article className="service-card" id="services-house" data-reveal="left">
             <a
               className="service-card__media"
               href="#estimate"
@@ -21,7 +21,7 @@ export default function Services() {
               </a>
             </div>
           </article>
-          <article className="service-card" id="services-driveway" data-reveal="up">
+          <article className="service-card" id="services-driveway" data-reveal="right">
             <a
               className="service-card__media"
               href="#estimate"
@@ -39,7 +39,7 @@ export default function Services() {
               </a>
             </div>
           </article>
-          <article className="service-card" id="services-deck" data-reveal="up">
+          <article className="service-card" id="services-deck" data-reveal="left">
             <a
               className="service-card__media"
               href="#estimate"

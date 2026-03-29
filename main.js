@@ -464,7 +464,7 @@
     if (revealEls.length) {
       document.documentElement.classList.add("js-reveal-ready");
       var revealGroupSel =
-        ".card-row, .mini-grid, .blog-row, .cta-band, .split, .reviews-layout, .gallery-tease, .contact-grid, .footer-grid";
+        ".hero__content, .card-row, .mini-grid, .blog-row, .cta-band, .split, .reviews-layout, .reviews-google-actions, .gallery-tease, .contact-grid, .footer-grid";
       var revealObs = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (en) {

@@ -2,18 +2,18 @@ export default function Reviews() {
   return (
     <section className="section section--reviews" id="reviews" aria-labelledby="reviews-heading">
       <div className="container">
-        <header className="section-header" data-reveal="fade">
+        <header className="section-header" data-reveal="left">
           <h2 className="section-title" id="reviews-heading">
             Google reviews
           </h2>
           <p className="section-intro">
-            Real reviews live on your Google Business Profile. Connect <code>lib/reviews-config.ts</code> with your Place
-            ID and map embed—then customers can leave reviews in one tap.
+            Real reviews live on your Google Business Profile—use the buttons below to read or leave a review.
           </p>
         </header>
-        <div className="reviews-google-actions" data-reveal="fade">
+        <div className="reviews-google-actions">
           <a
             className="btn btn--primary reviews-google-actions__btn"
+            data-reveal="left"
             data-apex-google="write"
             href="https://www.google.com/maps/search/?api=1&query=ApexWash+Exterior+Services+Your+City+ST"
             target="_blank"
@@ -23,15 +23,13 @@ export default function Reviews() {
           </a>
           <a
             className="btn btn--secondary reviews-google-actions__btn"
+            data-reveal="right"
             data-apex-google="read"
             href="https://www.google.com/maps/search/?api=1&query=ApexWash+Exterior+Services+Your+City+ST"
             target="_blank"
             rel="noopener noreferrer"
           >
             See all reviews on Google
-          </a>
-          <a className="reviews-google-actions__text-link" href="#reviews-setup">
-            How to connect your listing
           </a>
         </div>
         <div className="reviews-layout">
@@ -197,26 +195,6 @@ export default function Reviews() {
                 Share your experience on Google
               </a>
             </p>
-            <div className="reviews-setup" id="reviews-setup">
-              <p className="reviews-setup__title">Connect your Google listing</p>
-              <ol className="reviews-setup__steps">
-                <li>
-                  Open <strong>lib/reviews-config.ts</strong> and paste your <strong>Place ID</strong> (Google Business
-                  Profile → Business information).
-                </li>
-                <li>
-                  Optional: paste your <strong>Embed a map</strong> <code>src</code> URL so the map shows your exact pin.
-                </li>
-                <li>
-                  Set <strong>listingUrl</strong> to your live Maps link—the “Leave a review” button will use Google’s
-                  official review flow when Place ID is set.
-                </li>
-              </ol>
-              <p className="reviews-setup__note">
-                Third-party widgets (Elfsight, Trustindex, EmbedSocial) can replace the carousel—drop their HTML above the
-                review cards if you prefer a live feed.
-              </p>
-            </div>
           </div>
         </div>
       </div>

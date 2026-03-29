@@ -2,12 +2,12 @@ export default function Blog() {
   return (
     <section className="section section--blog" id="blog">
       <div className="container">
-        <header className="section-header" data-reveal="fade">
+        <header className="section-header" data-reveal="left">
           <h2 className="section-title">From the blog</h2>
           <p className="section-intro">Quick reads on caring for siding, concrete, and outdoor wood.</p>
         </header>
         <div className="blog-row">
-          <article className="blog-card" data-reveal="up">
+          <article className="blog-card" data-reveal="left">
             <a href="#blog">
               <div
                 className="blog-card__img"
@@ -20,7 +20,7 @@ export default function Blog() {
               <p>Matching the method to vinyl, brick, stucco, and wood.</p>
             </a>
           </article>
-          <article className="blog-card" data-reveal="up">
+          <article className="blog-card" data-reveal="right">
             <a href="#blog">
               <div
                 className="blog-card__img"

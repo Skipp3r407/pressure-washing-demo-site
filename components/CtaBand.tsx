@@ -17,11 +17,11 @@ export default function CtaBand({ id, title, text, buttonHref, buttonLabel, vari
   return (
     <section className={className} id={id}>
       <div className="container cta-band">
-        <div data-reveal="fade">
+        <div data-reveal="left">
           <h2 className="cta-band__title">{title}</h2>
           <p className="cta-band__text">{text}</p>
         </div>
-        <a className="btn btn--light" href={buttonHref} data-reveal="fade">
+        <a className="btn btn--light" href={buttonHref} data-reveal="right">
           {buttonLabel}
         </a>
       </div>

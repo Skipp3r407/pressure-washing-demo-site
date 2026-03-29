@@ -4,7 +4,7 @@ export default function BeforeAfter() {
   return (
     <section className="section section--before-after" id="before-after" aria-labelledby="ba-heading">
       <div className="container">
-        <header className="section-header section-header--left" data-reveal="fade">
+        <header className="section-header section-header--left" data-reveal="left">
           <h2 className="section-title" id="ba-heading">
             Before & after
           </h2>
@@ -13,7 +13,7 @@ export default function BeforeAfter() {
             professional editing simulation for demo.
           </p>
         </header>
-        <div className="ba-slider" id="ba-slider" data-ba-slider data-reveal="up">
+        <div className="ba-slider" id="ba-slider" data-ba-slider data-reveal="right">
           <div className="ba-slider__labels" aria-hidden="true">
             <span>Before</span>
             <span>After</span>

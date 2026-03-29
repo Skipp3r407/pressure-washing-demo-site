@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
-        <div data-reveal="up">
+        <div data-reveal="left">
           <p className="footer-heading">Connect</p>
           <ul className="footer-social">
             <li>
@@ -42,11 +42,11 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div data-reveal="up">
+        <div data-reveal="right">
           <p className="footer-heading">Payments we accept</p>
           <p className="footer-pay">Cash · Check · Major cards</p>
         </div>
-        <div data-reveal="up">
+        <div data-reveal="left">
           <p className="footer-heading">Our information</p>
           <ul className="footer-list">
             <li>
@@ -61,7 +61,7 @@ export default function Footer() {
             <li>ApexWash Exterior Services — Your City, ST</li>
           </ul>
         </div>
-        <div data-reveal="up">
+        <div data-reveal="right">
           <p className="footer-heading">Business hours</p>
           <dl className="hours-list hours-list--footer">
             <div className="hours-list__row">
@@ -79,7 +79,7 @@ export default function Footer() {
           </dl>
           <p className="footer-hours-note">Voicemail & form replies on the next business day.</p>
         </div>
-        <div data-reveal="up">
+        <div data-reveal="left">
           <p className="footer-heading">Areas we serve</p>
           <ul className="footer-list footer-list--two">
             <li>Northside</li>
@@ -92,10 +92,23 @@ export default function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <p>
+        <p className="footer-bottom__copy">
           © <span id="year" /> ApexWash Exterior Services. All rights reserved.
         </p>
-        <a href="#">Privacy policy</a>
+        <a
+          className="footer-design-credit"
+          href="https://elevatedigitalstudios.net/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Website Design by Elevate Digital Studio
+          <span className="footer-design-credit__icon" aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a className="footer-bottom__privacy" href="#">
+          Privacy policy
+        </a>
       </div>
     </footer>
   );

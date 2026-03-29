@@ -20,13 +20,17 @@ export default function Hero() {
       </div>
       <div className="hero__overlay" />
       <div className="container hero__content">
-        <p className="hero__eyebrow">Exterior cleaning done right</p>
-        <h1 className="hero__title">Restore your curb appeal—fast</h1>
-        <p className="hero__lead">
+        <p className="hero__eyebrow" data-reveal="left">
+          Exterior cleaning done right
+        </p>
+        <h1 className="hero__title" data-reveal="left">
+          Restore your curb appeal—fast
+        </h1>
+        <p className="hero__lead" data-reveal="left">
           From soft-wash siding to spotless concrete, we help homes and businesses look sharp without harsh damage to
           surfaces.
         </p>
-        <div className="hero__actions">
+        <div className="hero__actions" data-reveal="right">
           <a className="btn btn--primary" href="#estimate">
             Schedule cleaning
           </a>
